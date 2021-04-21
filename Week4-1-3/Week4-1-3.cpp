@@ -24,23 +24,23 @@ public:
     double Apply(double source) const {
         if (operation == '+')
             return source + value;
-        else
+        else if(operation == '-')
             return source - value;
-        if (operation == '*')
+        else if (operation == '*')
             return source * value;
-        else
+        else if (operation == '/')
             return source / value;
     }
 
     void Invert() {
         if (operation == '+')
             operation = '-';
-        else
+        else if (operation == '-')
             operation = '+';
 
-        if (operation == '*')
+        else if (operation == '*')
             operation = '/';
-        else
+        else if (operation == '/')
             operation = '*';
     }
 
